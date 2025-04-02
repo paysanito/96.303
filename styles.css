@@ -57,13 +57,19 @@ body {
     background-color: #fff;
     margin-top: 40px;
     border-radius: 10px;
+    flex-wrap: wrap; /* Permite que los iconos se ajusten a la pantalla si hay más de tres */
+    justify-content: center; /* Asegura que los iconos estén centrados */
 }
 
 /* Iconos grandes */
 .icon {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Imagen de los iconos */
 .icon img {
     width: 100px;  /* Tamaño del icono */
     height: 100px;
@@ -71,8 +77,17 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Hover en los iconos */
 .icon img:hover {
     transform: scale(1.1);
+}
+
+/* Texto debajo de los iconos */
+.icon span {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+    text-align: center;
 }
 
 /* Secciones de contenido eliminadas para simplificar */
