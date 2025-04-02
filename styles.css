@@ -1,36 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6b9ac4, #2e5894);
+    color: white;
     text-align: center;
-    background-color: #111;
-    color: #fff;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #ff0000;
-    padding: 20px;
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('background-pattern.png') repeat;
+    opacity: 0.3;
+    z-index: -1;
 }
 
-h1 {
-    margin: 0;
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-main {
-    padding: 20px;
+.icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.twitch-stream, .radio-player {
-    margin-bottom: 20px;
+.icon img {
+    width: 80px;
+    height: 80px;
 }
 
-#twitch-embed {
-    width: 80%;
-    height: 400px;
-    margin: 0 auto;
+.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-audio {
-    width: 80%;
-    max-width: 400px;
+.content {
+    display: none;
+    margin-top: 20px;
+}
+
+.content.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
 }
