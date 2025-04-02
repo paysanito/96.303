@@ -1,10 +1,15 @@
+/* Estilos para simular el layout del menú de la Nintendo 3DS */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6b9ac4, #2e5894);
-    color: white;
+    background-color: white;  /* Fondo blanco */
+    color: #333;
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .background {
@@ -18,8 +23,8 @@ body {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    gap: 10px;
+    grid-template-columns: repeat(3, 120px);
+    gap: 15px;
     justify-content: center;
     margin-top: 50px;
 }
@@ -27,23 +32,23 @@ body {
 .icon {
     width: 100px;
     height: 100px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
+    background-color: white;  /* Fondo blanco para los iconos */
+    border-radius: 25px;  /* Bordes redondeados */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra sutil */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .icon img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 }
 
 .icon:hover {
-    transform: scale(1.1);
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);  /* Efecto al pasar el mouse (agranda el icono) */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);  /* Sombra más intensa al pasar el mouse */
 }
 
 .content {
