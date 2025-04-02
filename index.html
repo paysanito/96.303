@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>96.303 WEB FM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>96.303 WEB FM</h1>
+    </header>
+
+    <main>
+        <section class="twitch-stream">
+            <h2>Transmisión en Vivo</h2>
+            <div id="twitch-embed"></div>
+        </section>
+
+        <section class="radio-player">
+            <h2>Música 24/7</h2>
+            <audio id="audioPlayer" controls loop>
+                <source src="URL_DE_TU_STREAM_O_ARCHIVO.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+    </main>
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
