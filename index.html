@@ -9,17 +9,23 @@
 <body>
     <div class="background"></div>
     <div class="menu-grid">
+        <!-- Icono Twitch -->
         <div class="icon twitch">
             <a href="#twitch"><img src="twitch-icon.png" alt="Twitch"></a>
         </div>
+        
+        <!-- Icono Radio 24/7 -->
         <div class="icon radio">
             <a href="#radio"><img src="radio-icon.png" alt="Radio 24/7"></a>
         </div>
+        
+        <!-- Icono Información -->
         <div class="icon info">
             <a href="#info"><img src="info-icon.png" alt="Información"></a>
         </div>
     </div>
-    
+
+    <!-- Sección de Twitch Embed -->
     <div id="twitch" class="content hidden">
         <h2>Transmisión en Vivo de Twitch</h2>
         <div id="twitch-embed"></div>
@@ -27,12 +33,13 @@
             new Twitch.Embed("twitch-embed", {
                 width: "100%",
                 height: 480,
-                channel: "nueveseis_trescerotres",
+                channel: "nueveseis_trescerotres",  <!-- Cambia esto con el canal de Twitch -->
                 theme: "dark",
             });
         </script>
     </div>
     
+    <!-- Sección Radio 24/7 -->
     <div id="radio" class="content hidden">
         <h2>Música 24/7</h2>
         <audio controls loop>
@@ -40,12 +47,13 @@
             Tu navegador no soporta el elemento de audio.
         </audio>
     </div>
-    
+
+    <!-- Sección de Información -->
     <div id="info" class="content hidden">
         <h2>Información de la estación</h2>
         <p>¡Bienvenidos a nuestra estación de radio 24/7!</p>
     </div>
-    
+
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script src="script.js"></script>
 </body>
