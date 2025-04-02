@@ -38,9 +38,9 @@ body {
 }
 
 .icon.small-icon img {
-    width: 40px;
+    width: 40px;  /* Tamaño ajustado para los iconos cuadrados */
     height: 40px;
-    border-radius: 50%;
+    /* Se eliminó el border-radius para hacerlos cuadrados */
     transition: transform 0.3s ease;
 }
 
@@ -102,5 +102,3 @@ p {
     text-align: center;
     color: #666;
 }
-
-
