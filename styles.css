@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #b1d0e7 0%, #e9f2fa 100%); /* Degradado similar al fondo de la 3DS */
+    background: linear-gradient(135deg, #b1d0e7 0%, #e9f2fa 100%); /* Degradado suave similar al fondo de la 3DS */
+    color: #333;
 }
 
 /* Fondo de la página con un patrón de textura */
@@ -13,29 +14,31 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/3DS_Background_Green.png/1280px-3DS_Background_Green.png'); /* Texto que imita fondo de la 3DS */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/3DS_Background_Green.png/1280px-3DS_Background_Green.png'); /* Patrón sutil */
     background-repeat: repeat; /* Hace que la imagen se repita */
-    opacity: 0.2; /* Ajuste de opacidad para hacerlo más sutil */
-    z-index: -1; /* Para que quede detrás del contenido */
+    opacity: 0.1; /* Menos opacidad para que el fondo no se vea tan fuerte */
+    z-index: -1; /* Fondo detrás del contenido */
 }
 
-/* Contenedor para los iconos pequeños (superior) */
+/* Fila de iconos pequeños (superior) */
 .menu-top {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    gap: 20px;
+    padding: 20px 0;
     background-color: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Espacio adicional entre el fondo y los iconos */
+    margin-top: 20px; /* Espacio entre el fondo y los iconos */
+    border-radius: 10px; /* Bordes redondeados para un look más limpio */
 }
 
-/* Iconos pequeños */
+/* Estilo de los iconos pequeños */
 .icon.small-icon {
-    margin: 0 10px;
+    margin: 0;
 }
 
 .icon.small-icon img {
-    width: 40px;  /* Ajusta el tamaño del icono */
+    width: 40px;
     height: 40px;
     border-radius: 50%;
     transition: transform 0.3s ease;
@@ -45,14 +48,15 @@ body {
     transform: scale(1.2);
 }
 
-/* Contenedor para los iconos grandes (principal) */
+/* Fila de iconos grandes (principal) */
 .menu-grid {
     display: flex;
     justify-content: center;
-    padding: 20px;
     gap: 20px;
+    padding: 40px 0;
     background-color: #fff;
-    margin-top: 40px; /* Espacio adicional entre la fila de iconos pequeños y grandes */
+    margin-top: 40px;
+    border-radius: 10px;
 }
 
 /* Iconos grandes */
@@ -61,7 +65,7 @@ body {
 }
 
 .icon img {
-    width: 100px;  /* Ajusta el tamaño del icono */
+    width: 100px;  /* Tamaño del icono */
     height: 100px;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -71,17 +75,32 @@ body {
     transform: scale(1.1);
 }
 
-/* Estilo para las secciones de contenido */
+/* Secciones de contenido */
 .content {
     display: none;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 20px auto;
 }
 
 /* Mostrar contenido cuando la clase "hidden" es removida */
 .content.hidden {
     display: block;
 }
+
+/* Títulos y texto */
+h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #444;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
 
