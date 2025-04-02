@@ -3,17 +3,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #b1d0e7 0%, #e9f2fa 100%); /* Degradado similar al fondo de la 3DS */
 }
 
-/* Fondo de la página */
+/* Fondo de la página con un patrón de textura */
 .background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333; /* Ajusta el color de fondo si es necesario */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/3DS_Background_Green.png/1280px-3DS_Background_Green.png'); /* Texto que imita fondo de la 3DS */
+    background-repeat: repeat; /* Hace que la imagen se repita */
+    opacity: 0.2; /* Ajuste de opacidad para hacerlo más sutil */
+    z-index: -1; /* Para que quede detrás del contenido */
 }
 
 /* Contenedor para los iconos pequeños (superior) */
@@ -23,6 +26,7 @@ body {
     padding: 10px;
     background-color: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espacio adicional entre el fondo y los iconos */
 }
 
 /* Iconos pequeños */
@@ -48,6 +52,7 @@ body {
     padding: 20px;
     gap: 20px;
     background-color: #fff;
+    margin-top: 40px; /* Espacio adicional entre la fila de iconos pequeños y grandes */
 }
 
 /* Iconos grandes */
@@ -79,3 +84,4 @@ body {
 .content.hidden {
     display: block;
 }
+
