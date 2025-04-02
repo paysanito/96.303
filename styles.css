@@ -21,34 +21,64 @@ body {
     z-index: -1;
 }
 
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 120px);
-    gap: 15px;
+/* Estilo para los iconos pequeños en la fila superior */
+.menu-top {
+    display: flex;
     justify-content: center;
-    margin-top: 50px;
+    gap: 15px;  /* Espacio entre los iconos */
+    margin-top: 30px;  /* Espacio entre la parte superior y los iconos grandes */
 }
 
-.icon {
-    width: 100px;
-    height: 100px;
+.small-icon {
+    width: 50px;  /* Tamaño más pequeño para los iconos superiores */
+    height: 50px;
     background-color: white;  /* Fondo blanco para los iconos */
-    border-radius: 25px;  /* Bordes redondeados */
+    border-radius: 12px;  /* Bordes redondeados */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra sutil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra sutil */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.small-icon img {
+    width: 30px;  /* Tamaño de las imágenes dentro de los iconos pequeños */
+    height: 30px;
+}
+
+.small-icon:hover {
+    transform: scale(1.1);  /* Efecto de agrandar al pasar el mouse */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);  /* Sombra más intensa al pasar el mouse */
+}
+
+/* Estilo para los iconos grandes */
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;  /* Espacio entre los iconos grandes */
+    margin-top: 30px;  /* Espacio entre los iconos pequeños y los grandes */
+}
+
+.icon {
+    width: 80px;  /* Iconos grandes */
+    height: 80px;
+    background-color: white;  /* Fondo blanco para los iconos */
+    border-radius: 15px;  /* Bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Sombra sutil */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .icon img {
-    width: 60px;
-    height: 60px;
+    width: 50px;  /* Tamaño de los iconos grandes */
+    height: 50px;
 }
 
 .icon:hover {
-    transform: scale(1.1);  /* Efecto al pasar el mouse (agranda el icono) */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);  /* Sombra más intensa al pasar el mouse */
+    transform: scale(1.1);  /* Efecto de agrandar al pasar el mouse */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);  /* Sombra más intensa al pasar el mouse */
 }
 
 .content {
