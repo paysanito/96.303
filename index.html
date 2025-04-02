@@ -7,25 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>96.303 WEB FM</h1>
-    </header>
-
-    <main>
-        <section class="twitch-stream">
-            <h2>Transmisión en Vivo</h2>
-            <div id="twitch-embed"></div>
-        </section>
-
-        <section class="radio-player">
-            <h2>Música 24/7</h2>
-            <audio id="audioPlayer" controls loop>
-                <source src="URL_DE_TU_STREAM_O_ARCHIVO.mp3" type="audio/mp3">
-                Tu navegador no soporta el elemento de audio.
-            </audio>
-        </section>
-    </main>
-
+    <div class="background"></div>
+    <div class="menu-grid">
+        <div class="icon twitch">
+            <a href="#twitch"><img src="twitch-icon.png" alt="Twitch"></a>
+        </div>
+        <div class="icon radio">
+            <a href="#radio"><img src="radio-icon.png" alt="Radio 24/7"></a>
+        </div>
+        <div class="icon info">
+            <a href="#info"><img src="info-icon.png" alt="Información"></a>
+        </div>
+    </div>
+    
+    <div id="twitch" class="content hidden">
+        <h2>Transmisión en Vivo</h2>
+        <div id="twitch-embed"></div>
+    </div>
+    
+    <div id="radio" class="content hidden">
+        <h2>Música 24/7</h2>
+        <audio controls loop>
+            <source src="URL_DE_TU_STREAM.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+    
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script src="script.js"></script>
 </body>
