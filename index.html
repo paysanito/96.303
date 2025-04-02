@@ -8,25 +8,48 @@
 </head>
 <body>
     <div class="background"></div>
+
+    <!-- Fila de iconos pequeños (superior) -->
+    <div class="menu-top">
+        <div class="icon small-icon">
+            <a href="#twitch"><img src="twitch-icon.png" alt="Twitch"></a>
+        </div>
+        <div class="icon small-icon">
+            <a href="#radio"><img src="radio-icon.png" alt="Radio 24/7"></a>
+        </div>
+        <div class="icon small-icon">
+            <a href="#info"><img src="info-icon.png" alt="Información"></a>
+        </div>
+    </div>
+
+    <!-- Fila de iconos grandes (principal) -->
     <div class="menu-grid">
         <div class="icon twitch">
-            <a href="#twitch">
-                <img src="https://github.com/usuario/nombre-repositorio/raw/main/images/twitch-icon.png" alt="Twitch">
-            </a>
+            <a href="#twitch"><img src="twitch-icon.png" alt="Twitch"></a>
         </div>
         <div class="icon radio">
-            <a href="#radio"><img src="https://github.com/paysanito/96.303/raw/main/images/music%203ds%20logojpg.jpg" alt="Radio 24/7"></a>
+            <a href="#radio"><img src="" alt="Radio 24/7"></a>
         </div>
         <div class="icon info">
-            <a href="#info"><img src="" alt="Info"></a>
+            <a href="#info"><img src="info-icon.png" alt="Información"></a>
         </div>
     </div>
 
+    <!-- Sección de Twitch Embed -->
     <div id="twitch" class="content hidden">
-        <h2>Transmisión en Vivo</h2>
+        <h2>Transmisión en Vivo de Twitch</h2>
         <div id="twitch-embed"></div>
+        <script type="text/javascript">
+            new Twitch.Embed("twitch-embed", {
+                width: "100%",
+                height: 480,
+                channel: "nombre_del_canal_de_twitch",  <!-- Cambia esto con el canal de Twitch -->
+                theme: "dark",
+            });
+        </script>
     </div>
-
+    
+    <!-- Sección Radio 24/7 -->
     <div id="radio" class="content hidden">
         <h2>Música 24/7</h2>
         <audio controls loop>
@@ -34,7 +57,13 @@
             Tu navegador no soporta el elemento de audio.
         </audio>
     </div>
-    
+
+    <!-- Sección de Información -->
+    <div id="info" class="content hidden">
+        <h2>Información de la estación</h2>
+        <p>¡Bienvenidos a nuestra estación de radio 24/7!</p>
+    </div>
+
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script src="script.js"></script>
 </body>
