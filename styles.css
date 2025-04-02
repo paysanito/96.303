@@ -38,9 +38,9 @@ body {
 }
 
 .icon.small-icon img {
-    width: 40px;  /* Tamaño ajustado para los iconos cuadrados */
+    width: 40px;  /* Tamaño ajustado para los iconos cuadrados con bordes redondeados */
     height: 40px;
-    /* Se eliminó el border-radius para hacerlos cuadrados */
+    border-radius: 10px;  /* Bordes ligeramente redondeados */
     transition: transform 0.3s ease;
 }
 
@@ -67,7 +67,7 @@ body {
 .icon img {
     width: 100px;  /* Tamaño del icono */
     height: 100px;
-    border-radius: 10px;
+    border-radius: 10px;  /* Bordes redondeados */
     transition: transform 0.3s ease;
 }
 
@@ -75,21 +75,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Secciones de contenido */
-.content {
-    display: none;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
-    margin: 20px auto;
-}
-
-/* Mostrar contenido cuando la clase "hidden" es removida */
-.content.hidden {
-    display: block;
-}
+/* Secciones de contenido eliminadas para simplificar */
 
 /* Títulos y texto */
 h2 {
